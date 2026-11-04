@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A static preview of NoteShareHub, a student notes sharing platform.">
+  <title>NoteShareHub | Static Demo</title>
+  <link rel="icon" href="../assets/img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/demo.css">
+</head>
+<body class="demo-page home-page">
+  <div class="demo-notice"><strong>Static GitHub Pages demo:</strong> PHP/MySQL features, accounts, uploads, downloads, and saved data are unavailable.</div>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="../assets/img/logo.svg" alt=""><span><span class="text-primary">NoteShare</span>Hub</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
+      <div class="collapse navbar-collapse" id="siteNav">
+        <ul class="navbar-nav me-auto ms-lg-3">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="browse.html">Browse Notes</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+        <div class="d-flex flex-wrap gap-2 mt-3 mt-lg-0">
+          <a class="btn btn-outline-primary" href="login.html">Login</a>
+          <a class="btn btn-primary" href="register.html">Register</a>
+          <a class="btn btn-primary" href="upload.html"><i class="fa-solid fa-cloud-arrow-up me-1"></i>Upload Notes</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7 text-center text-lg-start">
+            <div class="hero-pill"><i class="fa-solid fa-sparkles text-primary"></i><span>Welcome to NoteShareHub</span></div>
+            <h1 class="hero-title mb-3">Share and access study notes</h1>
+            <p class="hero-subtitle mb-4 text-secondary">Explore sample study materials and preview a student-powered academic resource hub.</p>
+            <form action="browse.html" method="get" class="mb-4">
+              <div class="hero-search-wrapper">
+                <i class="fa-solid fa-magnifying-glass text-muted ms-2"></i>
+                <input type="search" name="q" placeholder="Search notes by title or subject" aria-label="Search notes">
+                <button class="btn btn-primary" type="submit">Search Notes</button>
+              </div>
+            </form>
+            <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
+              <a class="btn btn-primary btn-lg" href="browse.html"><i class="fa-solid fa-compass me-2"></i>Browse Notes</a>
+              <a class="btn btn-outline-primary btn-lg" href="upload.html"><i class="fa-solid fa-cloud-arrow-up me-2"></i>Try Upload Demo</a>
+            </div>
+            <p class="small text-muted mt-4 mb-0"><i class="fa-solid fa-circle-info me-1"></i>This preview is static; no files or form data are sent.</p>
+          </div>
+          <div class="col-lg-5">
+            <article class="card-modern p-4 border-0">
+              <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3">
+                <span class="small text-muted"><i class="fa-solid fa-file-pdf text-danger me-2"></i>Featured sample note</span>
+                <span class="badge bg-primary-subtle text-primary">Sem 4 · CSE</span>
+              </div>
+              <h2 class="h5 fw-bold">Database Management Systems</h2>
+              <p class="text-muted small">Relational algebra, SQL, normalization, and ACID properties.</p>
+              <div class="p-3 bg-light rounded-3 small">
+                <div class="d-flex justify-content-between"><span>Subject code</span><strong>CS8492</strong></div>
+                <div class="d-flex justify-content-between mt-2"><span>Format</span><strong>PDF sample</strong></div>
+              </div>
+              <a class="btn btn-outline-primary btn-sm mt-3 w-100" href="browse.html">Browse sample notes</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container py-4">
+      <div class="stats-banner">
+        <div class="row g-4 text-center">
+          <div class="col-6 col-md-3"><div class="stat-counter-number">22</div><div class="small">Sample subjects</div></div>
+          <div class="col-6 col-md-3"><div class="stat-counter-number">6</div><div class="small">Departments</div></div>
+          <div class="col-6 col-md-3"><div class="stat-counter-number">8</div><div class="small">Sample notes</div></div>
+          <div class="col-6 col-md-3"><div class="stat-counter-number">1</div><div class="small">Static preview</div></div>
+        </div>
+      </div>
+    </section>
+    <section class="container py-5">
+      <div class="row g-4">
+        <div class="col-md-4"><article class="card-modern p-4 h-100"><i class="feature-icon fa-solid fa-magnifying-glass mb-3"></i><h2 class="h5">Browse resources</h2><p class="text-muted mb-0">Search sample note cards by title, topic, or department.</p></article></div>
+        <div class="col-md-4"><article class="card-modern p-4 h-100"><i class="feature-icon fa-solid fa-file-arrow-up mb-3"></i><h2 class="h5">Preview upload flow</h2><p class="text-muted mb-0">Explore the upload interface without sending a file.</p></article></div>
+        <div class="col-md-4"><article class="card-modern p-4 h-100"><i class="feature-icon fa-solid fa-code mb-3"></i><h2 class="h5">Full app is separate</h2><p class="text-muted mb-0">The live PHP/MySQL application is not hosted by GitHub Pages.</p></article></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container d-flex flex-column flex-md-row justify-content-between gap-2"><span class="fw-bold">NoteShareHub</span><span class="small text-muted">Static UI preview · No backend or account data</span><a class="small" href="about.html">About this demo</a></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/demo.js"></script>
+</body>
+</html>

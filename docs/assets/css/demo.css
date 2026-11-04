@@ -1,0 +1,67 @@
+.demo-notice {
+  border-bottom: 1px solid #c7d2fe;
+  background: #eef2ff;
+  color: #3730a3;
+  font-size: 0.875rem;
+  padding: 0.65rem 1rem;
+  text-align: center;
+}
+
+.demo-notice strong {
+  margin-right: 0.25rem;
+}
+
+.demo-page {
+  min-height: 100vh;
+}
+
+.demo-page .navbar-brand img {
+  height: 38px;
+  width: 38px;
+}
+
+.demo-page main {
+  padding-bottom: 1rem;
+}
+
+.demo-page .hero-section {
+  padding: 4.5rem 0;
+}
+
+.demo-page .page-intro {
+  padding: 3rem 0 1.5rem;
+}
+
+.demo-page .demo-form {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.demo-page .demo-result:empty {
+  display: none;
+}
+
+.demo-page .site-footer {
+  margin-top: 2rem;
+}
+
+.demo-page .feature-icon {
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.demo-page .sample-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 576px) {
+  .demo-page .hero-section {
+    padding: 2.5rem 0;
+  }
+
+  .demo-page .page-intro {
+    padding-top: 2rem;
+  }
+}
