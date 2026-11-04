@@ -1,0 +1,9 @@
+# Secure Uploads Directory
+# Disallow PHP / script execution
+<FilesMatch "\.(php|php3|php4|php5|phtml|pl|py|jsp|asp|sh|cgi|exe)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Disable Directory Browsing
+Options -Indexes

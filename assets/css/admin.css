@@ -1,0 +1,280 @@
+/**
+ * Student Notes Sharing Platform
+ * Admin Dashboard Stylesheet
+ */
+
+:root {
+  --admin-sidebar-width: 260px;
+  --admin-sidebar-bg: #0f172a;
+  --admin-sidebar-text: #94a3b8;
+  --admin-sidebar-active: #ffffff;
+  --admin-sidebar-active-bg: #1e293b;
+}
+
+body.admin-body {
+  background-color: #f1f5f9;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Admin Wrapper Layout */
+.admin-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.admin-sidebar {
+  width: var(--admin-sidebar-width);
+  background-color: var(--admin-sidebar-bg);
+  color: var(--admin-sidebar-text);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid #1e293b;
+  z-index: 1030;
+  transition: all 0.3s ease;
+}
+
+.admin-sidebar-brand {
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid #1e293b;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.15rem;
+}
+
+.admin-nav {
+  padding: 1.25rem 0.75rem;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.admin-nav-item .admin-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  color: var(--admin-sidebar-text);
+  font-weight: 600;
+  font-size: 0.925rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.admin-nav-item .admin-nav-link:hover {
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+.admin-nav-item .admin-nav-link.active {
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.admin-sidebar-footer {
+  margin-top: auto;
+  padding: 1.25rem;
+  border-top: 1px solid #1e293b;
+}
+
+/* Main Content Area */
+.admin-main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.admin-topbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0.85rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1010;
+}
+
+.admin-content {
+  padding: 2rem 1.75rem;
+  flex-grow: 1;
+}
+
+/* KPI Stat Cards */
+.admin-stat-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  transition: all 0.25s ease;
+}
+
+.admin-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+.admin-stat-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.icon-purple { background: #eef2ff; color: #4f46e5; }
+.icon-emerald { background: #ecfdf5; color: #10b981; }
+.icon-amber { background: #fffbeb; color: #f59e0b; }
+.icon-rose { background: #ffe4e6; color: #e11d48; }
+
+/* Table enhancements */
+.admin-table-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+.table > :not(caption) > * > * {
+  padding: 1rem 1.25rem;
+  vertical-align: middle;
+}
+
+.table thead th {
+  background-color: #f8fafc;
+  color: #475569;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Mobile Sidebar Toggle */
+@media (max-width: 991.98px) {
+  .admin-sidebar {
+    position: fixed;
+    left: -100%;
+    transition: left 0.3s ease;
+  }
+  .admin-sidebar.show {
+    left: 0;
+  }
+  .admin-main {
+    margin-left: 0;
+  }
+}
+
+/* Keep the administration pages simple and consistent with the main site. */
+body.admin-body {
+  background-color: #ffffff;
+  color: #263746;
+  font-family: Arial, Helvetica, system-ui, sans-serif;
+}
+
+.admin-sidebar {
+  --admin-sidebar-width: 235px;
+  background: #f4f8fc;
+  color: #526575;
+  border-right: 1px solid #dce5ed;
+  transition: left 0.15s ease;
+}
+
+.admin-sidebar-brand {
+  color: #263746;
+  border-bottom-color: #dce5ed;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.admin-sidebar-brand .text-white,
+.admin-sidebar-footer .text-truncate .text-white {
+  color: #263746 !important;
+}
+
+.admin-nav {
+  gap: 0.15rem;
+}
+
+.admin-nav-item .admin-nav-link {
+  padding: 0.65rem 0.8rem;
+  border-radius: 5px;
+  color: #526575;
+  font-weight: 500;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.admin-nav-item .admin-nav-link:hover,
+.admin-nav-item .admin-nav-link.active {
+  background: #e4eff8;
+  color: #285d91;
+  box-shadow: none;
+}
+
+.admin-sidebar-footer {
+  border-top-color: #dce5ed;
+}
+
+.admin-sidebar-footer .text-muted {
+  color: #6b7b88 !important;
+}
+
+.admin-topbar {
+  padding: 0.75rem 1.25rem;
+  box-shadow: none;
+}
+
+.admin-content {
+  padding: 1.5rem 1.25rem;
+}
+
+.admin-stat-card,
+.admin-table-card {
+  border-radius: 7px;
+  box-shadow: none;
+  transition: none;
+}
+
+.admin-stat-card:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.admin-stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+}
+
+.table thead th {
+  background: #f4f8fc;
+  letter-spacing: normal;
+}
+
+@media (max-width: 991.98px) {
+  .admin-sidebar {
+    box-shadow: none;
+  }
+}
